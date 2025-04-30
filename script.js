@@ -3,6 +3,7 @@ const form = document.getElementById("grocery-form");
 const itemNameInput = document.getElementById("item-name");
 const itemQtyInput = document.getElementById("item-qty");
 const groceryList = document.getElementById("grocery-list");
+const clearBtn = document.getElementById("clear-all");
 
 // Add event listeners to the form
 form.addEventListener("submit", function (e){
@@ -23,4 +24,9 @@ form.addEventListener("submit", function (e){
     // Clear the form fields
     itemNameInput.value = "";
     itemQtyInput.value = "";
+});
+
+// Add event listener to Clear All button
+clearBtn.addEventListener("click", function() {
+    groceryList.innerHTML = "";
 });
