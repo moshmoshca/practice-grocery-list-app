@@ -16,4 +16,11 @@ form.addEventListener("submit", function (e){
     //Create a new list item
     const li = document.createElement("li");
     li.textContent = `${name} - ${qty}`;
+
+    // Add it to the grocery list
+    groceryList.appendChild(li);
+
+    // Clear the form fields
+    itemNameInput.value = "";
+    itemQtyInput.value = "";
 });
