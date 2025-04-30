@@ -12,5 +12,8 @@ form.addEventListener("submit", function (e){
     const qty = itemQtyInput.value.trim(); // Get the quantity value
 
     if (name === "" || qty === "") return; // Avoid adding empty items
-
+    
+    //Create a new list item
+    const li = document.createElement("li");
+    li.textContent = `${name} - ${qty}`;
 });
